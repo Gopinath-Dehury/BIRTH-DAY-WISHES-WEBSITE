@@ -14,3 +14,8 @@ function showSlides() {
 }
 
 document.addEventListener('DOMContentLoaded', showSlides);
+document.querySelector('.play-button').addEventListener('click', () => {
+    const audio = document.getElementById('birthday-audio');
+    audio.play();
+  });
+  

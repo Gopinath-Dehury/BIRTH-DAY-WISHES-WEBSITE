@@ -66,3 +66,19 @@ body {
     aspect-ratio: 4 / 3; /* Switch to a 4:3 aspect ratio for smaller screens */
   }
 }
+
+
+.play-button {
+  background-color: #ff9a9e;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.play-button:hover {
+  background-color: #fad0c4;
+}
