@@ -18,7 +18,8 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+  height: auto; /* Allow height to adjust based on the content */
+  margin: 0 auto; /* Center the container */
 }
 
 .slide {
@@ -28,7 +29,7 @@ body {
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure images scale properly without distortion */
+  object-fit: contain; /* Ensure images are fully visible without cropping */
   border-radius: 10px;
 }
 
@@ -63,10 +64,16 @@ body {
   }
 
   .slideshow-container {
-    aspect-ratio: 4 / 3; /* Switch to a 4:3 aspect ratio for smaller screens */
+    width: 100%; /* Make slideshow container take full width on smaller screens */
+    height: auto; /* Allow the height to adjust based on the images */
+    max-width: none; /* Remove the max-width restriction for smaller screens */
+  }
+
+  .slide img {
+    object-fit: contain; /* Ensure images are fully visible on mobile without cropping */
+    max-height: 70vh; /* Limit the height to a percentage of the screen to avoid excessive scaling */
   }
 }
-
 
 .play-button {
   background-color: #ff9a9e;
